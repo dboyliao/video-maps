@@ -1,4 +1,7 @@
-
+## Ipython ##
 .ipynb_checkpoints/
 *.ipynb
+
+## Mac ##
+.DS_Store
 

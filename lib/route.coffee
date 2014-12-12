@@ -3,6 +3,7 @@ Router.configure
     
 
 Meteor.startup ->
+
   Router.map -> 
     @route "allVideos",
       path: "/allVideos"
@@ -14,8 +15,8 @@ Meteor.startup ->
       data:
         user: ->
           Meteor.user()
-        waitOn: -> 
-          Meteor.subscribe 'allVideos'
+      waitOn: -> 
+        Meteor.subscribe 'allVideos'
  
     @route "videos",
       path: "videos/:page?"
@@ -54,6 +55,9 @@ Meteor.startup ->
         if not searchWords
           Session.set("searchWords", ".*")
           searchWords = Session.get("searchWords")
+
+        console.log "[route.coffee] searchWords="
+        console.log searchWords
 
         qeury = {title:{$regex:searchWords,$options:"i"}}
 
