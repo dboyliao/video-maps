@@ -128,12 +128,12 @@ template(name="videoList")
   //-   hr
   //-   h2 {{text}}
   //-   hr
+  //- .row.clearfix
+  //-   .col-md-12.column
   .row.clearfix
-    .col-md-12.column
-      .row
-        each videoList
-          +video
-        
+    each videoList
+      +video
+    
             
   
 template(name="video")
