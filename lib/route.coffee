@@ -75,3 +75,9 @@ Meteor.startup ->
       
       waitOn: -> 
         Meteor.subscribe 'allVideos'
+
+    @route "communityList",
+      path: "/communityList"
+      template: "communityList"
+      waitOn: ->
+        Meteor.subscribe "allCommunity"

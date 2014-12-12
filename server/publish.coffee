@@ -11,3 +11,6 @@ Meteor.publish "allVideos", (mPage, nPerPage, qeury) ->
 	console.log kSkips
 
 	Videos.find qeury, {skip:kSkips, limit:nPerPage}
+
+Meteor.publish "allCommunity", ->
+	Community.find()

@@ -7,3 +7,5 @@
 	perPage: 20
 	itemTemplate: "video"
 	templateName: "videoPages"  
+
+@Community = new Meteor.Collection "community"
