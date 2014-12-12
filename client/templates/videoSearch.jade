@@ -1,0 +1,22 @@
+template(name="videoSearch")          
+  .container  
+    .text-center
+      h1 Search the Video You Want ... 
+
+      p MLDM Monday, Taiwan useR Group, COSCUP, ... and other open source communities ...
+    
+      +search
+    
+  
+    .nav
+      ul.pager
+        li.previous 
+          a(href="{{pathFor 'videos' page=prevPage }}") Previous Page
+        li [Page {{mPage}} ] {{startIdx}} ~ {{endIdx}} over {{countNVideos}} Videos
+        li.next 
+          a(href="{{pathFor 'videos' page=nextPage }}") Next Page
+
+
+      
+    br 
+    +videoList
