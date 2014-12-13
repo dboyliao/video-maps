@@ -1,0 +1,12 @@
+template(name='community')
+	tr
+		td(rowspan="2")
+			img(src='{{imgURL}}', width='200px', height='200px')
+		td &nbsp;&nbsp;&nbsp;
+		td(colspan="2")
+			a(href='{{meetupURL}}', target="_blank") 
+				h2 {{name}}
+	tr
+		td &nbsp;&nbsp;&nbsp;
+		td(colspan="2")
+			p {{description}}
